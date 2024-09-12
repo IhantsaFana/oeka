@@ -1,0 +1,207 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background: linear-gradient(30deg, #f7f7f7, #eaeaea, #fff) no-repeat;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff0e;
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    color: #4CAF50;
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.skills-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-icons li {
+    list-style: none;
+}
+
+.skills-icons li img {
+    width: 40px;
+    height: auto;
+}
+
+/* Profile picture */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.profile-picture img {
+    width: 50vh;
+    height: auto;
+    border-radius: 5%;
+    border: 5px solid #4CAF50;
+}
+
+/* Content Section */
+.content {
+    text-align: left;
+    padding-left: 10px;
+    flex: 2;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 4vw;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+p {
+    font-size: 1.2vw;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons .btn {
+    background-color: #4CAF50;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1.2vw;
+    display: inline-block;
+}
+
+.buttons .btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture img {
+        width: 200px;
+    }
+
+    h1, h2 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    .buttons .btn {
+        font-size: 2vw;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-picture img {
+        width: 180px;
+    }
+
+    h1, h2 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+    }
+
+    .buttons .btn {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture img {
+        width: 150px;
+    }
+
+    h1, h2 {
+        font-size: 8vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    .buttons .btn {
+        font-size: 3vw;
+    }
+}
+
+main {
+    max-width: 100%;
+    position: relative;
+}

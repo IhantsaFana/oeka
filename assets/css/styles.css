@@ -1,0 +1,220 @@
+body {
+  background: var(--bs-body-color);
+}
+
+.main-container {
+  background: linear-gradient(11deg, var(--bs-indigo) 3%, white), var(--bs-indigo);
+  border-radius: 20px;
+}
+
+.header {
+  min-height: 90vh;
+}
+
+.navbar {
+  background: linear-gradient(94deg, var(--bs-navbar-hover-color), white);
+  border-radius: 20px;
+}
+
+.bg-image {
+  background: url("../../assets/img/2shjwo.jpg") center / cover;
+  height: 78vh;
+  position: relative;
+  color: var(--bs-white);
+  border-radius: 9px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-color {
+  background: linear-gradient(97deg, var(--bs-indigo), var(--bs-gray-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .social-icons {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+    padding: 10px !important;
+  }
+  .social-icons a {
+    margin: 0 10px !important;
+  }
+}
+
+
+/* loader */
+.loader {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 6.250em;
+  height: 6.250em;
+  animation: rotate5123 2.4s linear infinite;
+}
+
+.white {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  animation: flash 2.4s linear infinite;
+  opacity: 0;
+}
+
+.dot {
+  position: absolute;
+  margin: auto;
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 100%;
+  transition: all 1s ease;
+}
+
+.dot:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #FF4444;
+  animation: dotsY 2.4s linear infinite;
+}
+
+.dot:nth-child(3) {
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #FFBB33;
+  animation: dotsX 2.4s linear infinite;
+}
+
+.dot:nth-child(4) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #99CC00;
+  animation: dotsY 2.4s linear infinite;
+}
+
+.dot:nth-child(5) {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #33B5E5;
+  animation: dotsX 2.4s linear infinite;
+}
+
+@keyframes rotate5123 {
+  0% {
+    transform: rotate( 0 );
+  }
+
+  10% {
+    width: 6.250em;
+    height: 6.250em;
+  }
+
+  66% {
+    width: 2.4em;
+    height: 2.4em;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    width: 6.250em;
+    height: 6.250em;
+  }
+}
+
+@keyframes dotsY {
+  66% {
+    opacity: .1;
+    width: 2.4em;
+  }
+
+  77% {
+    opacity: 1;
+    width: 0;
+  }
+}
+
+@keyframes dotsX {
+  66% {
+    opacity: .1;
+    height: 2.4em;
+  }
+
+  77% {
+    opacity: 1;
+    height: 0;
+  }
+}
+
+@keyframes flash {
+  33% {
+    opacity: 0;
+    border-radius: 0%;
+  }
+
+  55% {
+    opacity: .6;
+    border-radius: 100%;
+  }
+
+  66% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green; /* Cursor */
+  animation: typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}

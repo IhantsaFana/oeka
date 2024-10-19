@@ -1,5 +1,8 @@
 body {
   background: var(--bs-body-color);
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
 }
 
 .main-container {
@@ -45,6 +48,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Adaptation pour les écrans jusqu'à 992px */
 @media (max-width: 992px) {
   .social-icons {
     position: absolute !important;
@@ -63,6 +67,36 @@ body {
   }
 }
 
+/* Adaptation pour les écrans jusqu'à 768px */
+@media (max-width: 768px) {
+  .social-icons {
+    bottom: 10px !important;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* Adaptation pour les écrans jusqu'à 370px */
+@media (max-width: 370px) {
+  .social-icons {
+    padding: 5px !important;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* loader */
 .loader {

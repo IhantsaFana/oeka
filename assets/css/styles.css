@@ -40,7 +40,7 @@ body {
 }
 
 .main-color {
-  background: linear-gradient(97deg, var(--bs-indigo), var(--bs-gray-300));
+  background: linear-gradient(30deg, var(--bs-indigo), var(--bs-gray-300));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -57,6 +57,9 @@ body {
   }
   .social-icons a {
     margin: 0 10px !important;
+  }
+  .title {
+    font-size: 2.5rem;
   }
 }
 

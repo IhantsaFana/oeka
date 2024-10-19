@@ -75,6 +75,7 @@ body {
   }
   .title {
     font-size: 2rem;
+    margin-top: 20px;
   }
 }
 
@@ -86,6 +87,7 @@ body {
   }
   .title {
     font-size: 1.5rem;
+    margin-top: 20px;
   }
 }
 
